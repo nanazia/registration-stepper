@@ -1,5 +1,7 @@
-<p>{{ form.email }}</p>
-<p>{{ form.group }}</p>
-<p>{{ form.avatar }}</p>
+<div *ngIf="form">
+    <p>{{ form.email }}</p>
+    <p>{{ form.group }}</p>
+    <p>{{ form.avatar }}</p>
+</div>   
 
 <button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="!form" (click)="onSubmit()">Submit</button>
