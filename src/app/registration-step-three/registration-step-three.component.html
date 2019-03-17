@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+
+  <app-modal [buttonText]="buttonText" (imageUpload)="handleStateChanged($event)"></app-modal>
+
+  <div 
+    *ngIf="avatar.invalid"
+    class="error">
+    <ng-container *ngIf="!!avatar.errors.required">Choosing avatar is required</ng-container>
+  </div>
+
+  <button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="!imgUrl" (click)="onNext()">Next</button>
+</form>

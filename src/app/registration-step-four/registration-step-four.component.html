@@ -1,0 +1,5 @@
+<p>{{ form.email }}</p>
+<p>{{ form.group }}</p>
+<p>{{ form.avatar }}</p>
+
+<button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="!form" (click)="onSubmit()">Submit</button>

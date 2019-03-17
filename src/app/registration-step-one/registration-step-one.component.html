@@ -1,0 +1,35 @@
+<form [formGroup]="form">
+    <label>EMAIL</label>
+    <input 
+      type="text" 
+      formControlName="email"/>
+    <div 
+      *ngIf="email.touched && email.invalid"
+      class="error">
+        <ng-container *ngIf="!!email.errors?.required">Email is required</ng-container>
+        <ng-container *ngIf="!!email.errors?.email">Email must be valid</ng-container>
+    </div>
+    <label>PASSWORD</label>
+    <input 
+      type="password"  
+      formControlName="password"/>
+    <div 
+      *ngIf="password.touched && password.invalid"
+      class="error">
+      <ng-container *ngIf="!!password.errors?.required">Password is required</ng-container>
+    </div>
+    <label>VERIFY PASSWORD</label>
+    <input 
+      type="password"  
+      formControlName="password-check"/>
+    <div 
+      *ngIf="passwordCheck.touched && passwordCheck.invalid"
+      class="error">
+      <ng-container *ngIf="!!passwordCheck.errors.required">Password is required</ng-container>
+      
+    </div>
+    <div  class="error" *ngIf="passwordCheck.valid && form.invalid && !!form.errors?.isPasswordTheSame">Password is not the same</div>
+  </form>
+  <button type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+  
+  

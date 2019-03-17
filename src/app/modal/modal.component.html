@@ -1,0 +1,8 @@
+<button type="button" class="show-btn" (click)="isModalShown = !isModalShown">
+    {{ buttonText }}
+</button> 
+    <div class="modal" [class.show]="isModalShown">
+        <div class="modal-inside">
+            <app-upload-image (imageUpload)="handleStateChanged($event)" (imageUploadCancelled)="handleCancelImageUpload($event)"></app-upload-image>
+        </div>    
+    </div>
