@@ -8,7 +8,7 @@ import { IRegistrationForm } from './IRegistrationForm';
 })
 export class RegistrationComponent {
 
-  current = 0;
+  current = 1;
 
   form: IRegistrationForm;
 

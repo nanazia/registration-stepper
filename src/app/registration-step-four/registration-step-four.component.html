@@ -1,7 +1,7 @@
 <div *ngIf="form">
     <p>{{ form.email }}</p>
     <p>{{ form.group }}</p>
-    <p>{{ form.avatar }}</p>
+    <p><img [src]="form.avatar" /></p>
 </div>   
 
 <button type="button" class="btn" (click)="onCancell()">Cancel</button>
