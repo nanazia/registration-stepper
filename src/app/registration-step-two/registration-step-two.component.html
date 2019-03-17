@@ -17,6 +17,7 @@
         <ng-container *ngIf="!!group.errors.required">Choosing group is required</ng-container>
       </div> 
     </form>
-    <button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+    <button class="btn" type="button" (click)="onCancell()">Cancel</button>
+    <button class="btn" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
     
     

@@ -8,5 +8,6 @@
     <ng-container *ngIf="!!avatar.errors.required">Choosing avatar is required</ng-container>
   </div>
 
-  <button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="!imgUrl" (click)="onNext()">Next</button>
+  <button type="button" class="btn" (click)="onCancell()" >Cancel</button>
+  <button type="button" class="btn" [disabled]="!imgUrl" (click)="onNext()" >Next</button>
 </form>

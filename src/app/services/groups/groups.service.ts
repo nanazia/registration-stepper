@@ -15,12 +15,10 @@ export class GroupsService {
 
     public getGroups(): Observable<IGroup[]> {
       return new Observable((observer) => {
-        setTimeout( () => {
           this.http.get<IGroup[]>(this.url).subscribe(res => {
             observer.next(res);
             observer.complete();
           });
-        }, 1000);
     });
     }
 

@@ -4,4 +4,5 @@
     <p>{{ form.avatar }}</p>
 </div>   
 
-<button type="button" (click)="onCancell()">Cancel</button><button type="button" [disabled]="!form" (click)="onSubmit()">Submit</button>
+<button type="button" class="btn" (click)="onCancell()">Cancel</button>
+<button type="button" class="btn" [disabled]="!form" (click)="onSubmit()">Submit</button>

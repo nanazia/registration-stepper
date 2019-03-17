@@ -23,12 +23,12 @@ describe('GroupsService', () => {
     expect(service).toBeTruthy();
   });
 
-  // it(`should get groups`, async(inject([GroupsService, HttpTestingController],
-  //   (service: GroupsService, backend: HttpTestingController) => {
-  //     service.getGroups().subscribe();
+  it(`should get groups`, async(inject([GroupsService, HttpTestingController],
+    (service: GroupsService, backend: HttpTestingController) => {
+      service.getGroups().subscribe();
 
-  //     backend.expectOne((req: HttpRequest<any>) => {
-  //       return req.url.endsWith('/assets/mock.json') && req.method === 'GET';
-  //     }, `GET groups`);
-  // })));
+      backend.expectOne((req: HttpRequest<any>) => {
+        return req.url.endsWith('/assets/mock.json') && req.method === 'GET';
+      }, `GET groups`);
+  })));
 });
