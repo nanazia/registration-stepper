@@ -24,11 +24,33 @@ $modal-color: #333;
 
     .modal-inside {
         position: absolute;
-        width:283px;
-        height:200px;
+        width:600px;
+        height:350px;
         background: $modal-inside-bg;
         color: $modal-color;
         font-size:20px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .title {
+            font-size: 20px;
+            color:#777;
+            width: 100%;
+            padding: 40px 30px;
+            border-bottom: 1px solid #aaa;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .desc {
+            width:100%;
+            padding: 40px 30px 20px;
+            color: #777;;
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 0 20px 30px;
+        }
     
         p {
             padding:20px;

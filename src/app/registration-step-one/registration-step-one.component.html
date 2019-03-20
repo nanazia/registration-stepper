@@ -1,8 +1,9 @@
-<form [formGroup]="form">
+<form class="stepper" [formGroup]="form">
     <label>EMAIL</label>
     <input 
       type="text" 
-      formControlName="email"/>
+      formControlName="email"
+      placeholder="[Required]"/>
     <div 
       *ngIf="email.touched && email.invalid"
       class="error">
@@ -12,7 +13,8 @@
     <label>PASSWORD</label>
     <input 
       type="password"  
-      formControlName="password"/>
+      formControlName="password"
+      placeholder="[Required]"/>
     <div 
       *ngIf="password.touched && password.invalid"
       class="error">
@@ -21,7 +23,8 @@
     <label>VERIFY PASSWORD</label>
     <input 
       type="password"  
-      formControlName="password-check"/>
+      formControlName="password-check"
+      placeholder="[Required]"/>
     <div 
       *ngIf="passwordCheck.touched && passwordCheck.invalid"
       class="error">
@@ -30,6 +33,8 @@
     </div>
     <div  class="error" *ngIf="passwordCheck.valid && form.invalid && !!form.errors?.isPasswordTheSame">Password is not the same</div>
   </form>
-  <button type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+  <div class="bottombar">
+    <button class="primary" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+  </div>
   
   

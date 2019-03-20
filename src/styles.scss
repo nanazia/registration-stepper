@@ -1,1 +1,158 @@
 /* You can add global styles to this file, and also import other style files */
+
+$headerHeight: 100px;
+
+@font-face {
+    font-family: Proxima Nova Regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://resources.jamf.com/type/proxima-nova-regular.eot?iefix=) format("eot"),url(https://resources.jamf.com/type/proxima-nova-regular.woff2) format("woff2"),url(https://resources.jamf.com/type/proxima-nova-regular.woff) format("woff"),url(https://resources.jamf.com/type/proxima-nova-regular.ttf) format("truetype");
+}
+
+body, html {
+    height: 100%;
+    margin:0;
+    padding:0;
+    font-family: Proxima Nova Regular, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #5E6B85;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 20px;
+    color:#333;
+    padding:0;
+    margin:0;
+}
+
+div {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.bottombar {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 40px 0;
+}
+
+label, input {
+    width: 100%;
+}
+
+input, select {
+    border: 1px solid #D4D9DE;
+    border-radius: 2px;
+    padding: 10px 5px;
+    color: #5E6B85;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    background-color:#fff;
+}
+
+label {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 0;
+    display: block;
+
+    .desc {
+        color:#777;
+        font-size:10px;
+        font-weight: normal;
+        text-transform: none;
+        padding-left: 20px;
+    }
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0 10px 0 0;
+    border-radius: 20px;
+    color: #777;
+    font-size:16px;
+    font-weight: 100;
+    background-image: linear-gradient(#fff, #fafafa);
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(#fafafa, #fff);
+    
+}
+
+button.primary {
+    background: #278AFE;
+    color:#fff;
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+button.primary:hover {
+    background: rgb(27, 117, 219);
+}
+
+button:disabled, button:disabled:hover {
+    background: #777;
+    cursor: not-allowed;
+}
+
+.btn-small {
+    height:25px;
+    padding: 0 15px;
+    color: #777;
+    font-size: 12px;
+}
+
+.error {
+    columns: #af0c0c;;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.info {
+    font-size: 14px;
+    color: #777;
+    font-weight: 100;
+    text-transform: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #D5D9E0;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #D5D9E0;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #D5D9E0;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #D5D9E0;
+  }
+
+  form.stepper {
+    min-height: 80%;
+  }
+
+  .hidden {
+      display: none;
+  }

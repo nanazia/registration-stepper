@@ -1,8 +1,20 @@
-<div *ngIf="form">
-    <p>{{ form.email }}</p>
-    <p>{{ form.group }}</p>
-    <p><img [src]="form.avatar" /></p>
+<div *ngIf="form" class="holder">
+        <label>EMAIL</label>
+        <input 
+            type="text" 
+            disabled="true"
+            [value]="form.email"/>
+        <label>USER GROUP</label>
+        <input 
+            type="text" 
+            disabled="true"
+            [value]="form.group"/>
+        <label>AVATAR</label>
+        <div class="avatar">
+            <img [src]="form.avatar" />
+        </div>
 </div>   
-
-<button type="button" class="btn" (click)="onCancell()">Cancel</button>
-<button type="button" class="btn" [disabled]="!form" (click)="onSubmit()">Submit</button>
+<div class="bottombar">
+    <button type="button" (click)="onCancell()">Cancel</button>
+    <button type="button" class="primary" [disabled]="!form" (click)="onSubmit()">Submit</button>
+</div>

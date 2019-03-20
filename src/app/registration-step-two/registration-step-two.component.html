@@ -1,23 +1,23 @@
-<form [formGroup]="form">
-    {{ current }}
-      <label>USER GROUP</label>
-      
-        <ng-container *ngIf="(groups | async) as groupsList; else loading">
-        <select name="groups" placeholder="None" [formControl]="group">
-            <option disabled value="">None</option>
-          <ng-container *ngFor="let group of groupsList">
-              <option [value]="group.name">{{ group.name }}</option>
-          </ng-container>
-        </select>
+<form class="stepper" [formGroup]="form">
+  <h2>Choose the User Group</h2>
+  <label>USER GROUP<span class="desc">User group to add the users to</span></label>
+    <ng-container *ngIf="(groups | async) as groupsList; else loading">
+    <select name="groups" placeholder="None" [formControl]="group">
+        <option disabled value="">None</option>
+      <ng-container *ngFor="let group of groupsList">
+          <option [value]="group.name">{{ group.name }}</option>
       </ng-container>
-      <ng-template #loading><img class="loader" src="/assets/loader.gif" /></ng-template>
-      <div 
-        *ngIf="group.invalid"
-        class="error">
-        <ng-container *ngIf="!!group.errors.required">Choosing group is required</ng-container>
-      </div> 
-    </form>
-    <button class="btn" type="button" (click)="onCancell()">Cancel</button>
-    <button class="btn" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
-    
+    </select>
+  </ng-container>
+  <ng-template #loading><img class="loader" src="/assets/loader.gif" /></ng-template>
+  <div 
+    *ngIf="group.invalid && group.touched"
+    class="error">
+    <ng-container *ngIf="!!group.errors.required">Choosing group is required</ng-container>
+  </div> 
+</form>
+<div class="bottombar">
+  <button type="button" (click)="onCancell()">Cancel</button>
+  <button class="primary" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+</div>
     

@@ -1,0 +1,13 @@
+@import 'src/styles.scss';
+
+.avatar-icon {
+    padding: 20px;
+    max-height: 512px;
+    max-width: 512px;
+    overflow: hidden;
+
+    img {
+        max-height: 512px;
+        max-width: 512px;
+    }
+}

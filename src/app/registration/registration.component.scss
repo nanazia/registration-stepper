@@ -1,3 +1,54 @@
+@import 'src/styles.scss';
+
 .error {
     color:red;
+}
+
+.sidebar {
+    width: 21%;
+    min-width: 300px;
+    min-height: 100%;
+    display: flex;
+    // background: #FCFCFC;
+    background-image: url("/assets/side-background.png");
+    background-repeat: repeat;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 400;
+    overflow: hidden;
+
+    .app-icon {
+        width:100%;
+        height:400px;
+        position: absolute;
+        bottom: 0;
+        right: -40px;
+        background-image: url("/assets/app-icon.png");
+        background-repeat: no-repeat;
+        background-size:400px;
+    }
+}
+
+
+.container {
+    background: #fff;
+    width:79%;
+    position: relative;
+    padding: 50px 20px 20px;
+    border-left: 1px solid #ddd;
+}
+
+.flexbox {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    min-height: calc(100% - 100px);
+
+    .flexbox-col {
+        height: 100%;
+        flex: 1;
+    }
+      
 }

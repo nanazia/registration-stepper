@@ -1,0 +1,19 @@
+@import 'src/styles.scss';
+
+.panel {
+    width:100%;
+    height: $headerHeight;
+    background: #fff;
+    display: inline-block;
+    box-shadow: 0 0 10px #ccc;
+    z-index: 2;
+    position: relative;
+    padding-top:23px;
+
+    img {
+        float: left;
+        height: 40px;
+        padding: 5px 20px;
+    }
+
+}

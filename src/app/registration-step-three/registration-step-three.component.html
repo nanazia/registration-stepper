@@ -1,13 +1,17 @@
-<form [formGroup]="form">
+<form class="stepper" [formGroup]="form">
 
+  <label>AVATAR<span class="desc">User avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span></label>
+  <div class="avatar-icon"><img [src]=" !imgUrl ? '/assets/avatar-icon.png' : imgUrl" /></div>
   <app-modal [buttonText]="buttonText" (imageUpload)="handleStateChanged($event)"></app-modal>
 
   <div 
-    *ngIf="avatar.invalid"
+    *ngIf="avatar.invalid && avatar.touched"
     class="error">
     <ng-container *ngIf="!!avatar.errors.required">Choosing avatar is required</ng-container>
   </div>
 
-  <button type="button" class="btn" (click)="onCancell()" >Cancel</button>
-  <button type="button" class="btn" [disabled]="!imgUrl" (click)="onNext()" >Next</button>
 </form>
+<div class="bottombar">
+  <button type="button" (click)="onCancell()" >Cancel</button>
+  <button type="button" class="primary" [disabled]="!imgUrl" (click)="onNext()" >Next</button>
+</div>

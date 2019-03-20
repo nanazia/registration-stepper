@@ -12,6 +12,7 @@ import { RegistrationStepFourComponent } from './registration-step-four/registra
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StepperComponent } from './stepper/stepper.component';
     UploadImageComponent,
     RegistrationStepFourComponent,
     ModalComponent,
-    StepperComponent
+    StepperComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

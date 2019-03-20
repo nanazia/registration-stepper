@@ -1,9 +1,12 @@
-<div class="sidebar">
-    <app-stepper [current]="current"></app-stepper>
-</div>
-<div class="container">
-    <app-registration-step-one *ngIf="current === 1" (formChanged)="handleStateChanged($event)" [current]="current" ></app-registration-step-one>
-    <app-registration-step-two *ngIf="current === 2" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" ></app-registration-step-two>
-    <app-registration-step-three *ngIf="current === 3" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" ></app-registration-step-three>
-    <app-registration-step-four *ngIf="current === 4" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" [form]="form"></app-registration-step-four>
+<div class="flexbox">
+    <div class="sidebar">
+        <app-stepper [current]="current" style="z-index: 10"></app-stepper>
+        <div class="app-icon"></div>
+    </div>
+    <div class="container">
+        <app-registration-step-one *ngIf="current === 1" (formChanged)="handleStateChanged($event)" [current]="current" ></app-registration-step-one>
+        <app-registration-step-two *ngIf="current === 2" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" ></app-registration-step-two>
+        <app-registration-step-three *ngIf="current === 3" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" ></app-registration-step-three>
+        <app-registration-step-four *ngIf="current === 4" (formChanged)="handleStateChanged($event)" (currentChanged)="handleCurrentChanged($event)" [current]="current" [form]="form"></app-registration-step-four>
+    </div>
 </div>
