@@ -1,18 +1,17 @@
 @import 'src/styles.scss';
 
 .error {
-    color:red;
+    color:$error;
 }
 
 .sidebar {
     width: 21%;
-    min-width: 300px;
+    flex-basis: 350px;
     min-height: 100%;
-    display: flex;
-    // background: #FCFCFC;
-    background-image: url("/assets/side-background.png");
+    background-color: $alabaster;
+    background-image: $side-bg;
     background-repeat: repeat;
-    padding: 50px 40px;
+    padding: 55px 25px;
     box-sizing: border-box;
     font-size: 13px;
     font-weight: 400;
@@ -24,7 +23,7 @@
         position: absolute;
         bottom: 0;
         right: -40px;
-        background-image: url("/assets/app-icon.png");
+        background-image: $side-bg-icon;
         background-repeat: no-repeat;
         background-size:400px;
     }
@@ -32,11 +31,11 @@
 
 
 .container {
-    background: #fff;
-    width:79%;
+    background: $white;
+    flex-grow: 1;
     position: relative;
     padding: 50px 20px 20px;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $alto;
 }
 
 .flexbox {

@@ -1,11 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-$headerHeight: 100px;
+$headerHeight: 85px;
+
+$font-family: Proxima Nova Regular;
+$comet: #5E6B85;
+$white: #fff;
+$mine-shaft: #333;
+$mischka: #D5D9E0;
+$boulder: #777;
+$error: #af0c0c;
+$primary: #278AFE;
+$primary-hover: #1B75DB;
+$alabaster: #fafafa;
+$silver-chalice: #aaa;
+$silver: #ccc;
+$alto: #DBDBDB;
+$pastel-green: #7DD96E;
+$tundra: #4E4D4D;
+
+$modal-bg: rgba(0,0,0,0.5);
+$modal-inside-bg: #fff;
+$modal-color: #333;
+
+$light: 100;
+$mid: 300;
+$bold: 400;
+
+$side-bg: url("/assets/side-background.png");
+$side-bg-icon: url("/assets/app-icon.png");
 
 @font-face {
-    font-family: Proxima Nova Regular;
+    font-family: $font-family;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $bold;
     src: url(https://resources.jamf.com/type/proxima-nova-regular.eot?iefix=) format("eot"),url(https://resources.jamf.com/type/proxima-nova-regular.woff2) format("woff2"),url(https://resources.jamf.com/type/proxima-nova-regular.woff) format("woff"),url(https://resources.jamf.com/type/proxima-nova-regular.ttf) format("truetype");
 }
 
@@ -13,21 +40,22 @@ body, html {
     height: 100%;
     margin:0;
     padding:0;
-    font-family: Proxima Nova Regular, sans-serif;
+    font-family: $font-family, sans-serif;
     font-style: normal;
-    font-weight: 100;
-    color: #5E6B85;
+    font-weight: $light;
+    color: $comet;
 }
 
 h1 {
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: $light;
+    font-size: 24px;
+    color: $tundra;
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: $bold;
     font-size: 20px;
-    color:#333;
+    color:$mine-shaft;
     padding:0;
     margin:0;
 }
@@ -36,6 +64,10 @@ div {
     padding:0;
     margin:0;
     box-sizing: border-box;
+}
+
+form.stepper, .holder {
+    min-height: 90%;
 }
 
 .bottombar {
@@ -52,10 +84,10 @@ label, input {
 }
 
 input, select {
-    border: 1px solid #D4D9DE;
+    border: 1px solid $mischka;
     border-radius: 2px;
     padding: 10px 5px;
-    color: #5E6B85;
+    color: $comet;
     margin-bottom: 8px;
     box-sizing: border-box;
 }
@@ -63,19 +95,19 @@ input, select {
 select {
     width: 100%;
     height: 40px;
-    background-color:#fff;
+    background-color:$white;
 }
 
 label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     padding: 6px 0;
     display: block;
 
     .desc {
-        color:#777;
-        font-size:10px;
+        color:$boulder;
+        font-size:12px;
         font-weight: normal;
         text-transform: none;
         padding-left: 20px;
@@ -86,44 +118,44 @@ button {
     padding: 10px 15px;
     margin: 0 10px 0 0;
     border-radius: 20px;
-    color: #777;
+    color: $boulder;
     font-size:16px;
     font-weight: 100;
-    background-image: linear-gradient(#fff, #fafafa);
+    background-image: linear-gradient($white, $alabaster);
     outline: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-image: linear-gradient(#fafafa, #fff);
+    background-image: linear-gradient($alabaster, $white);
     
 }
 
 button.primary {
-    background: #278AFE;
-    color:#fff;
+    background: $primary;
+    color:$white;
     float: right;
     margin: 0 0 0 10px;
 }
 
 button.primary:hover {
-    background: rgb(27, 117, 219);
+    background: $primary-hover;
 }
 
 button:disabled, button:disabled:hover {
-    background: #777;
+    background: $boulder;
     cursor: not-allowed;
 }
 
 .btn-small {
     height:25px;
     padding: 0 15px;
-    color: #777;
+    color: $boulder;
     font-size: 12px;
 }
 
 .error {
-    columns: #af0c0c;;
+    columns: $error;;
     font-size: 10px;
     text-transform: uppercase;
     padding-bottom: 10px;
@@ -131,28 +163,43 @@ button:disabled, button:disabled:hover {
 
 .info {
     font-size: 14px;
-    color: #777;
-    font-weight: 100;
+    color: $boulder;
+    font-weight: $light;
     text-transform: none;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #D5D9E0;
-  }
-  ::-moz-placeholder { /* Firefox 19+ */
-    color: #D5D9E0;
-  }
-  :-ms-input-placeholder { /* IE 10+ */
-    color: #D5D9E0;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-    color: #D5D9E0;
-  }
+::-webkit-input-placeholder { 
+    color: $mischka;
+}
+::-moz-placeholder { 
+    color: $mischka;
+}
+:-ms-input-placeholder { 
+    color: $mischka;
+}
+:-moz-placeholder { 
+    color: $mischka;
+}
 
-  form.stepper {
-    min-height: 80%;
-  }
 
-  .hidden {
-      display: none;
+.hidden {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 5px),
+      calc(100% - 15px) calc(1em + 5px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      0;
+    background-repeat: no-repeat;
   }

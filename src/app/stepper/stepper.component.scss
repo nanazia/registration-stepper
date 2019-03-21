@@ -1,3 +1,4 @@
+@import 'src/styles.scss';
 
 .step {
     padding: 10px;
@@ -5,20 +6,22 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    color: #4E4D4D;
+    color: $tundra;
+    font-size: 16px;
+    font-weight: 100;
 }
 
 .dot {
     height: 10px;
     width: 10px;
-    background-color:#A0A0A0;
+    background-color:$silver-chalice;
     border-radius: 50%;
     display: inline-block;
-    margin-right:10px;
+    margin-right: 25px;
     margin-bottom: 1px;
 
     &.active { 
-        background-color:#7DD96E;
+        background-color: $pastel-green;
     }
 }
 

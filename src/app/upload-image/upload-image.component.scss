@@ -1,16 +1,18 @@
+@import 'src/styles.scss';
+
 .modal-label {
     padding-bottom: 50px;
     padding: 5px 15px;
     border-radius: 20px;
-    color: #777777;
+    color: $boulder;
     height: 13px;
     font-size:11px;
     font-weight: 100;
     text-transform: none;
-    background-image: linear-gradient(#fff, #fafafa);
+    background-image: linear-gradient($white, $alabaster);
     outline: none;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid $silver;
     display: inline-block;
     width: auto;
 }
