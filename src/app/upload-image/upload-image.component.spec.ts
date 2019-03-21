@@ -58,4 +58,16 @@ describe('UploadImageComponent', () => {
     });
   });
 
+  describe('on image chosen', function() {
+    it('should do nothing if there is empty value', function() {
+      spyOn(component, 'preview').and.callThrough();
+
+      fixture.detectChanges();
+      component.preview('');
+
+      expect(component.imgURL).toBeFalsy();
+    });
+
+  });
+
 });

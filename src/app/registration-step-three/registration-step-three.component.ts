@@ -12,7 +12,7 @@ export class RegistrationStepThreeComponent {
   @Input() current: Number;
 
   form: FormGroup;
-  imgUrl: any;
+  imgUrl: any = '';
   buttonText = 'Upload avatar';
 
   constructor(fb: FormBuilder) {

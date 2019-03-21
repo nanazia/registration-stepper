@@ -34,7 +34,7 @@
     <div  class="error" *ngIf="passwordCheck.valid && form.invalid && !!form.errors?.isPasswordTheSame">Password is not the same</div>
   </form>
   <div class="bottombar">
-    <button class="primary" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
+    <button class="primary btn" type="button" [disabled]="form.invalid" (click)="onNext()">Next</button>
   </div>
   
   

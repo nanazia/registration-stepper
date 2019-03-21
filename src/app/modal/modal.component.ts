@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
   @Input()
   buttonText = '';
@@ -14,12 +14,6 @@ export class ModalComponent implements OnInit {
 
   @Output()
   public imageUpload: EventEmitter<any> = new EventEmitter();
-
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   handleStateChanged(imageURL) {
     this.imageUpload.emit(imageURL);

@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RegistrationStepOneComponent } from './registration-step-one.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VALID } from '@angular/forms/src/model';
 
 describe('RegistrationStepOneComponent', () => {
   let component: RegistrationStepOneComponent;
@@ -29,4 +30,5 @@ describe('RegistrationStepOneComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

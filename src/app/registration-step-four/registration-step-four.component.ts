@@ -15,7 +15,6 @@ export class RegistrationStepFourComponent {
 
 
   onSubmit() {
-    console.log(this.form);
     return;
   }
 

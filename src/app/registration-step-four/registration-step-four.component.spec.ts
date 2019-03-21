@@ -45,5 +45,17 @@ describe('RegistrationStepFourComponent', () => {
       expect(component.onSubmit).not.toHaveBeenCalledWith();
     });
 
+    it('should call the function "onSubmit" on button 2', function() {
+      spyOn(component, 'onSubmit').and.callThrough();
+      component.form = 'aaa';
+      fixture.detectChanges();
+
+      const buttons = compile.getElementsByClassName('btn');
+      buttons[1].click();
+
+      expect(buttons[1].disabled).toBeFalsy();
+      expect(component.onSubmit).toHaveBeenCalledWith();
+    });
+
   });
 });

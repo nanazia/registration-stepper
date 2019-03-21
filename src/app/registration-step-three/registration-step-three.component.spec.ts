@@ -43,8 +43,9 @@ describe('RegistrationStepThreeComponent', () => {
       const buttons = compile.getElementsByClassName('btn');
       buttons[1].click();
 
-      expect(buttons[1].disabled).toBeTruthy();
+      expect(buttons[1].disabled).toBeFalsy();
       expect(component.onNext).not.toHaveBeenCalled();
     });
   });
 });
+

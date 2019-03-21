@@ -53,4 +53,23 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should decrement current by 1', () => {
+    component.current = 2;
+
+    component.handleStateChanged('test');
+    fixture.detectChanges();
+
+    expect(component.current).toBe(3);
+  });
+
+  it('should increment current by 1', () => {
+    component.current = 2;
+
+    component.handleCurrentChanged(true);
+    fixture.detectChanges();
+
+    expect(component.current).toBe(1);
+  });
+
 });

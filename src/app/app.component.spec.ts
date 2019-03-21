@@ -13,6 +13,7 @@ import { GroupsService } from './services/groups/groups.service';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -30,7 +31,8 @@ describe('AppComponent', () => {
         RegistrationStepFourComponent,
         StepperComponent,
         UploadImageComponent,
-        ModalComponent
+        ModalComponent,
+        HeaderComponent
       ],
       imports: [
         HttpClientModule,
