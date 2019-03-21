@@ -9,8 +9,6 @@ import { IRegistrationForm } from '../registration/IRegistrationForm';
 })
 export class RegistrationStepThreeComponent {
 
-  @Input() current: Number;
-
   form: FormGroup;
   imgUrl: any = '';
   buttonText = 'Upload avatar';

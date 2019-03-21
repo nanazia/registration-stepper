@@ -10,7 +10,7 @@ import { RegistrationStepThreeComponent } from './registration-step-three/regist
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { RegistrationStepFourComponent } from './registration-step-four/registration-step-four.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './modal/modal.component';
+import { ImageModalComponent } from './image-modal/image-modal.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -23,7 +23,7 @@ import { HeaderComponent } from './header/header.component';
     RegistrationStepThreeComponent,
     UploadImageComponent,
     RegistrationStepFourComponent,
-    ModalComponent,
+    ImageModalComponent,
     StepperComponent,
     HeaderComponent
   ],

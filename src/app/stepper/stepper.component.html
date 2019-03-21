@@ -1,6 +1,6 @@
-<div *ngIf="current">
-  <div class="step btn"><div class="dot" [class.active]="current === 1"></div>Add login details</div>
-  <div class="step btn"><div class="dot" [class.active]="current === 2"></div>Select the user group</div>
-  <div class="step btn"><div class="dot" [class.active]="current === 3"></div>Add an avatar</div>
-  <div class="step btn"><div class="dot" [class.active]="current === 4"></div>Submit the form</div>
+<div class="container" *ngIf="current">
+  <div class="step btn"><span class="icon-holder"><div class="dot" [class.active]="current === 1"></div></span><span>Add login details</span></div>
+  <div class="step btn"><span class="icon-holder"><div class="dot" [class.active]="current === 2"></div></span><span>Select the user group</span></div>
+  <div class="step btn"><span class="icon-holder"><div class="dot" [class.active]="current === 3"></div></span><span>Add an avatar</span></div>
+  <div class="step btn"><span class="icon-holder"><div class="dot" [class.active]="current === 4"></div></span><span>Submit the form</span></div>
 </div>

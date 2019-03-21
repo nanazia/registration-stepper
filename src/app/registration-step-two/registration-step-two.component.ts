@@ -10,8 +10,6 @@ import { GroupsService } from '../services/groups/groups.service';
 })
 export class RegistrationStepTwoComponent {
 
-  @Input() current: Number;
-
   form: FormGroup;
 
   constructor(fb: FormBuilder, private service: GroupsService ) {

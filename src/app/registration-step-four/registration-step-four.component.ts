@@ -7,7 +7,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class RegistrationStepFourComponent {
 
-  @Input() current: Number;
   @Input() form: any;
 
   @Output()

@@ -1,10 +1,10 @@
-@import 'src/styles.scss';
+@import '../../styles.scss';
 
 .modal {
     position: fixed;
     top:0;
     left:0;
-    z-index: 2;
+    z-index: 999;
     display:none;
     align-items: center;
     justify-content: center;
@@ -22,8 +22,8 @@
 
     .modal-inside {
         position: absolute;
-        width:600px;
-        height:350px;
+        width: 80%;
+        height:auto;
         background: $modal-inside-bg;
         color: $modal-color;
         font-size:20px;
@@ -60,4 +60,11 @@
 
 .show-btn {
     box-sizing: border-box;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .modal .modal-inside {
+        width:600px;
+    }
 }

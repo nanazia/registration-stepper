@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistrationStepThreeComponent } from './registration-step-three.component';
-import { ModalComponent } from '../modal/modal.component';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 import { UploadImageComponent } from '../upload-image/upload-image.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -14,7 +14,7 @@ describe('RegistrationStepThreeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         RegistrationStepThreeComponent,
-        ModalComponent,
+        ImageModalComponent,
         UploadImageComponent
       ],
       imports: [

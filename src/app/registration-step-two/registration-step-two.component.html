@@ -9,7 +9,7 @@
       </ng-container>
     </select>
   </ng-container>
-  <ng-template #loading><img class="loader" src="/assets/loader.gif" /></ng-template>
+  <ng-template #loading><div class="loader-holder"><span class="desc">Loading groups...</span></div></ng-template>
   <div 
     *ngIf="group.invalid && group.touched"
     class="error">

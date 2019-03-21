@@ -2,7 +2,7 @@
 
   <label>AVATAR<span class="desc">User avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span></label>
   <div class="avatar-icon"><img [src]=" !imgUrl ? '/assets/avatar-icon.png' : imgUrl" /></div>
-  <app-modal [buttonText]="buttonText" (imageUpload)="handleStateChanged($event)"></app-modal>
+  <app-image-modal [buttonText]="buttonText" (imageUpload)="handleStateChanged($event)"></app-image-modal>
 
   <div 
     *ngIf="avatar.invalid && avatar.touched"

@@ -30,7 +30,7 @@ $side-bg: url("/assets/side-background.png");
 $side-bg-icon: url("/assets/app-icon.png");
 
 @font-face {
-    font-family: $font-family;
+    font-family: $font-family, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: $bold;
     src: url(https://resources.jamf.com/type/proxima-nova-regular.eot?iefix=) format("eot"),url(https://resources.jamf.com/type/proxima-nova-regular.woff2) format("woff2"),url(https://resources.jamf.com/type/proxima-nova-regular.woff) format("woff"),url(https://resources.jamf.com/type/proxima-nova-regular.ttf) format("truetype");

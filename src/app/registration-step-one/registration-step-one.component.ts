@@ -11,8 +11,6 @@ import { IRegistrationForm } from '../registration/IRegistrationForm';
 })
 export class RegistrationStepOneComponent {
 
-  @Input() current: Number;
-
   form: FormGroup;
 
   constructor(fb: FormBuilder) {

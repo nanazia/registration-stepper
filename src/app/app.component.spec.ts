@@ -10,7 +10,7 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { GroupsService } from './services/groups/groups.service';
-import { ModalComponent } from './modal/modal.component';
+import { ImageModalComponent } from './image-modal/image-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
@@ -31,7 +31,7 @@ describe('AppComponent', () => {
         RegistrationStepFourComponent,
         StepperComponent,
         UploadImageComponent,
-        ModalComponent,
+        ImageModalComponent,
         HeaderComponent
       ],
       imports: [

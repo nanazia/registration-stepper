@@ -7,7 +7,7 @@ import { RegistrationStepTwoComponent } from '../registration-step-two/registrat
 import { RegistrationStepThreeComponent } from '../registration-step-three/registration-step-three.component';
 import { RegistrationStepFourComponent } from '../registration-step-four/registration-step-four.component';
 import { UploadImageComponent } from '../upload-image/upload-image.component';
-import { ModalComponent } from '../modal/modal.component';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -28,7 +28,7 @@ describe('RegistrationComponent', () => {
         RegistrationStepFourComponent,
         StepperComponent,
         UploadImageComponent,
-        ModalComponent
+        ImageModalComponent
       ],
       imports: [
         HttpClientModule,

@@ -1,6 +1,12 @@
-@import 'src/styles.scss';
+@import '../../styles.scss';
 
-.loader {
-    height:10px;
-    width:10px;
+.loader-holder {
+    width:100%;
+    padding-top:10px;
+    text-align: center;
+
+    .loader {
+        height:50px;
+        width:50px;
+    }
 }

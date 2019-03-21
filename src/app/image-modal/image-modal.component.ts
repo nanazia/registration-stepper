@@ -1,11 +1,11 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  selector: 'app-image-modal',
+  templateUrl: './image-modal.component.html',
+  styleUrls: ['./image-modal.component.scss']
 })
-export class ModalComponent {
+export class ImageModalComponent {
 
   @Input()
   buttonText = '';

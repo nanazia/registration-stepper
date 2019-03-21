@@ -1,29 +1,46 @@
-@import 'src/styles.scss';
+@import '../../styles.scss';
 
+.container {
+    width: 100%;
+}
 .step {
+    width: 100%;
     padding: 10px;
-    line-height: 10px;
+    line-height: 20px;
     padding: 10px;
-    display: flex;
     align-items: center;
     color: $tundra;
     font-size: 16px;
     font-weight: 100;
-}
+    display: flex;
+    align-items: center;
 
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color:$silver-chalice;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 25px;
-    margin-bottom: 1px;
+    span {
+        display: inline-block;
+        width: 80%;
 
-    &.active { 
-        background-color: $pastel-green;
+        &.icon-holder {
+            width:20%;
+
+            .dot {
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                background-color:$silver-chalice;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 25px;
+                margin-bottom: 1px;
+            
+                &.active { 
+                    background-color: $pastel-green;
+                }
+            }
+        }
     }
+
 }
+
 
 
 
