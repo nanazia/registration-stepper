@@ -1,16 +1,16 @@
 <button type="button" class="show-btn btn" (click)="isModalShown = !isModalShown">
     {{ buttonText }}
 </button> 
-    <div class="modal" [class.show]="isModalShown">
-        <div class="modal-inside">
-            <div class="title">
-                Avatar
-            </div>
-            <div class="desc">
-                User avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
-            </div>
-            <div class="content">
-                <app-upload-image (imageUpload)="handleStateChanged($event)" (imageUploadCancelled)="handleCancelImageUpload($event)"></app-upload-image>
-            </div>
-        </div>    
-    </div>
+<div class="modal" [class.show]="isModalShown">
+    <div class="modal-inside">
+        <div class="title">
+            Avatar
+        </div>
+        <div class="desc">
+            User avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
+        </div>
+        <div class="content">
+            <app-upload-image (imageUpload)="handleStateChanged($event)" (imageUploadCancelled)="handleCancelImageUpload($event)"></app-upload-image>
+        </div>
+    </div>    
+</div>

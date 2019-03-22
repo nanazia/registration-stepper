@@ -1,4 +1,26 @@
-# RegistrationStepper
+# RegistrationStepper - few words about the project
+The task is hosted on StackBlitz from my public GitHub Repository: https://github.com/nanazia/registration-stepper 
+I was coding this task using Visual Studio Code for convinience aspects, then uploading my changes to GitHub Repository, as Plnkr does not allow importing GitHub Repos, I decided to use Stack https://stackblitz.com/ which is really awesome, and can display any public GitHub Repository. I hope it won't be an issue for you.  
+
+## what has been done
+* Form is done using Reactive Forms in Angular.
+* There is a sample validation for form fields and one custom Validator to check if the confirmed password is the same.
+* For mock.json file I created a service - as I guessed that normally this data would come from some kind of API.  
+* I added a small preview of uploaded image.
+* Steps are driven by "current" variable
+
+## what could be impoved: 
+* Prefilling of fields with values from localstorage if an attempt to sign in already existed.  
+* Cropping feature for images bigger then 512x512 pixels.  
+* More complex validation of email field and password fields.  
+* More responsive styling with convinient mobile view.  
+* Adding some smooth animation to make it more attractive.  
+* If the application had more states that would need to be passed from component to component if would be profitable to add a Store for easy access.  
+* Font Proxima-Nova uploaded to the repository ( I did not get it, and it is a premium font, so I just took an url to font-face from jamf website, as per what you may see some CORS errors in the console :) )
+* I could spend more time on styling
+
+
+# Angular CLI Default Information:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 

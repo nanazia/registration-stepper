@@ -26,7 +26,7 @@ describe('ImageModalComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be idden in initialization', () => {
+  it('should be hidden in initialization', () => {
     expect(compile.querySelector('.show')).toBeFalsy();
   });
 
@@ -40,7 +40,7 @@ describe('ImageModalComponent', () => {
     expect(compile.querySelector('.desc').innerHTML).toContain('User avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.');
   });
 
-  it('should be hidden in initialization', () => {
+  it('should emit ImageUpload and hide the modal', () => {
     spyOn(component.imageUpload, 'emit');
     component.isModalShown = true;
     fixture.detectChanges();

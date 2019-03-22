@@ -3,6 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { StepperComponent } from './stepper.component';
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 
+@Component({
+  selector: 'app-test-component-wrapper',
+  template: '<app-stepper [current]="current"></app-stepper>'
+})
+class TestWrapperComponent {
+  current = 3;
+}
+
 describe('StepperComponent', () => {
   let component: StepperComponent;
   let fixture: ComponentFixture<TestWrapperComponent>;
@@ -37,10 +45,3 @@ describe('StepperComponent', () => {
 
 });
 
-@Component({
-  selector: 'app-test-component-wrapper',
-  template: '<app-stepper [current]="current"></app-stepper>'
-})
-class TestWrapperComponent {
-  current = 3;
-}
